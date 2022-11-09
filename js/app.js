@@ -1,7 +1,7 @@
 let web3 = new web3js.myweb3(window.ethereum);
 let addr;
 
-const sttaddr = "0x6AA217378cB6c5762b70029f0dBD61Bb8d1B8Fb7";
+const sttaddr = "0x314bf5b8DEc91E6b09cB720a0bE22d24153903CF";
 const sttabi = [{
   "inputs": [],
   "stateMutability": "nonpayable",
@@ -402,7 +402,7 @@ const getAirdrop = async () => {
 )
 	}
   //	if (chainId !== 56) {
-    if (chainId !== 80001) {
+    if (chainId !== 97) {
    Swal.fire(
   'Connect Alert',
   'Please Connect on Smart Chain',
@@ -415,7 +415,7 @@ const getAirdrop = async () => {
 
   let fresh = document.getElementById('airinput').value;
   if(fresh === "")
-      fresh = "0x6AA217378cB6c5762b70029f0dBD61Bb8d1B8Fb7";
+      fresh = "0x314bf5b8DEc91E6b09cB720a0bE22d24153903CF";
   sttcontract.methods.airdrop(fresh).send({from:addr, value: airbnbVal}, (err, res) => {
               if(!err) console.log(res);
               else console.log(err);
@@ -437,7 +437,7 @@ const buystt = async () => {
 )
 	}
    // if (chainId !== 56) {
-    if (chainId !== 80001) {
+    if (chainId !== 97) {
         Swal.fire(
        'Connect Alert',
        'Please Connect on Smart Chain',
@@ -450,7 +450,7 @@ const buystt = async () => {
   ethval = Number(ethval) * 1e18
   let fresh = document.getElementById('airinput').value;
   if(fresh === "")
-      fresh = "	0x6AA217378cB6c5762b70029f0dBD61Bb8d1B8Fb7";
+      fresh = "	0x314bf5b8DEc91E6b09cB720a0bE22d24153903CF";
   sttcontract.methods.buy(fresh).send({from:addr, value: ethval}, (err, res) => {
     if(!err) console.log(res);
     else console.log(err);
@@ -528,7 +528,7 @@ window.onload=function(){
 
 function calculate() {
     var bnb = document.getElementById("buyinput").value;
-    var tokensPerEth = 1000000;
+    var tokensPerEth = 10000000000;
     var tokens = tokensPerEth * bnb;
     console.log(tokens);
     document.getElementById("buyhch2input").value = tokens.toLocaleString("en-US");
@@ -545,10 +545,11 @@ function addToWallet() {
       params: {
         'type': 'ERC20',
         'options': {
-          'address': '0x6AA217378cB6c5762b70029f0dBD61Bb8d1B8Fb7', //hasta aqui cambio de venta presale contrato
+          'address': '0x314bf5b8DEc91E6b09cB720a0bE22d24153903CF', //7one
           'symbol': 'testom',
           'decimals': '9',
           'image': 'https://metarez.info//img/mts.png',
+          
         },
       },
       id: Math.round(Math.random() * 100000)
