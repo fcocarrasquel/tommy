@@ -49,6 +49,7 @@
 							class="rocket-btn  rocket-btn-animated-icon rocket-btn-accent"><span
 								class="rocket-btn-icon-wrap"><i class="fa fa-globe" aria-hidden="true"></i></span> <span
 								class="rocket-btn-text-wrap">Bscscan</span></a></li>
+
 				</ul>
 			</div>
 		</div>
@@ -79,7 +80,25 @@
 								class="rocket-btn rocket-btn-animated-icon rocket-btn-fixed-width"><span
 									class="rocket-btn-icon-wrap"><i class="fa fa-rocket" aria-hidden="true"></i></span>
 								<span class="rocket-btn-text-wrap">$NEKOTOMT</span></a></div> 
+								
+								<div class="button-block" onclick="copyContent()"" ><a 
+									class="rocket-btn rocket-btn-animated-icon">
+									<span id="myText">0xb278648f4fed233d12d74b000ae7b478d96042db</span></a></div> 
+									<script>
+										let text = document.getElementById('myText').innerHTML;
+										const copyContent = async () => {
+										  try {
+											await navigator.clipboard.writeText(text);
+											alert('Content copied to clipboard');
+										  } catch (err) {
+										   
+											 console.error('Failed to copy: ', err);
+										  }
+										}
+									  </script>
 					</div>
+
+					
 
 					
 
