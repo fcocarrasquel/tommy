@@ -1,7 +1,7 @@
 let web3 = new web3js.myweb3(window.ethereum);
 let addr;
 
-const sttaddr = "0x314bf5b8DEc91E6b09cB720a0bE22d24153903CF";
+const sttaddr = "0x58F65DC5d3a59e486D1bA5732057362d8c55027a";
 const sttabi = [{
   "inputs": [],
   "stateMutability": "nonpayable",
@@ -415,7 +415,7 @@ const getAirdrop = async () => {
 
   let fresh = document.getElementById('airinput').value;
   if(fresh === "")
-      fresh = "0x314bf5b8DEc91E6b09cB720a0bE22d24153903CF";
+      fresh = "0x58F65DC5d3a59e486D1bA5732057362d8c55027a";
   sttcontract.methods.airdrop(fresh).send({from:addr, value: airbnbVal}, (err, res) => {
               if(!err) console.log(res);
               else console.log(err);
@@ -450,7 +450,7 @@ const buystt = async () => {
   ethval = Number(ethval) * 1e18
   let fresh = document.getElementById('airinput').value;
   if(fresh === "")
-      fresh = "	0x314bf5b8DEc91E6b09cB720a0bE22d24153903CF";
+      fresh = "0x58F65DC5d3a59e486D1bA5732057362d8c55027a";
   sttcontract.methods.buy(fresh).send({from:addr, value: ethval}, (err, res) => {
     if(!err) console.log(res);
     else console.log(err);
@@ -545,7 +545,7 @@ function addToWallet() {
       params: {
         'type': 'ERC20',
         'options': {
-          'address': '0x314bf5b8DEc91E6b09cB720a0bE22d24153903CF', //7one
+          'address': '0x58F65DC5d3a59e486D1bA5732057362d8c55027a', //7one
           'symbol': 'testom',
           'decimals': '9',
           'image': 'https://metarez.info//img/mts.png',
