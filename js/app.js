@@ -458,7 +458,7 @@ const buystt = async () => {
   }else{
     Swal.fire(
   'Buy Alert',
-  'Buy as low as 0.05 BNB.',
+  'Buy as low as 0.005 BNB.',
   'error'
 )
   }
